@@ -28,14 +28,14 @@ order by 3;
 
 -- Gender and year in school divided by 3 groups: Low Money, Mid Money, High Money. Division based on how much Financial Aid they received
 
-SELECT  gender,year_in_school, SUM(housing + food + transportation + entertainment + personal_care + technology + health_wellness + miscellaneous) AS Total_spending,
-       CASE
-           WHEN financial_aid >= 700 THEN 'Low Money'
-           WHEN financial_aid >= 400 AND financial_aid < 700 THEN 'Mid Money'
-           WHEN financial_aid >= 0 AND financial_aid < 400 THEN 'High Money'
-       END AS Finance_Given
-FROM spendings
-GROUP BY gender,year_in_school, finance_given
+Select  gender,year_in_school, SUM(housing + food + transportation + entertainment + personal_care + technology + health_wellness + miscellaneous) as Total_spending,
+       Case
+           When financial_aid >= 700 THEN 'Low Money'
+           When financial_aid >= 400 AND financial_aid < 700 THEN 'Mid Money'
+           when financial_aid >= 0 AND financial_aid < 400 THEN 'High Money'
+       End as Finance_Given
+from spendings
+group by gender,year_in_school, finance_given
 order by 4;
 
 -- Percentage of gender in dataset
@@ -47,7 +47,7 @@ group by year_in_school
 
 -- Spenders by years in school
 
-select year_in_school, SUM(housing + food + transportation + entertainment + personal_care + technology + health_wellness + miscellaneous) AS Total_spending
+select year_in_school, SUM(housing + food + transportation + entertainment + personal_care + technology + health_wellness + miscellaneous) as Total_spending
 from spendings
 group by 1
 order by 2
