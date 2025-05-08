@@ -1,10 +1,10 @@
 ## Intro
 
-I was interested in the spending of college students by year in class, gender, and their choice of payments. This analysis gathers 1000 students' information on their spending habits.
+This project explores the spending habits of 1,000 college students, analyzing differences by class year, gender, and preferred payment methods.
 
 
 ## Goal                                                           
-The goal of this project is to understand which method of payments vendors should have available to college students. This analysis should reveal which audience you should target based on the data sample.
+The objective is to identify which payment methods should be prioritized by vendors serving college students. The analysis aims to highlight key audience segments based on spending behavior.
 
 ## Data analysis link
 [Student Spending SQL](Student%20Spending.sql)
